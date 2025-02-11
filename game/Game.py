@@ -55,7 +55,7 @@ class Game:
         self.foods = [food for food in self.foods if not food.destroy()]
 
     def spawn_food(self):
-        food = Food(spawn_chance=0.1, max_food = 5) # 1% chance to spawn a food and max 10 food
+        food = Food(spawn_chance=0.1, max_food = 10) # 1% chance to spawn a food and max 10 food
         has_spawned = food.spawn( amount = len(self.foods), board_width= self.board.width, board_height= self.board.height)
         if has_spawned : self.foods.append(food)
 
